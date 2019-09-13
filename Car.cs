@@ -9,8 +9,15 @@ namespace CarEvents
         public int CurrentSpeed { get; set; }
         public int MaxSpeed { get; set; }
         public string PetName { get; set; }
-
         private bool carIsDead;
+
+        public Car(string name, int maxSp, int currSp)
+        {
+            PetName = name;
+            CurrentSpeed = currSp;
+            MaxSpeed = maxSp;
+        }
+
         // This delegate works in conjunction with the Car's events.
         public delegate void CarEngineHandler(string msg);
 
