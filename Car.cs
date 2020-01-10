@@ -1,16 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CarEvents
 {
     public class Car
     {
+        // Fields
+        private bool carIsDead;
+
+        // Properties
         public int CurrentSpeed { get; set; }
         public int MaxSpeed { get; set; }
         public string PetName { get; set; }
-        private bool carIsDead;
-
+        
+        // Constructors.
         public Car(string name, int maxSp, int currSp)
         {
             PetName = name;
@@ -30,8 +32,7 @@ namespace CarEvents
             // If the car is dead, fire Exploded event.
             if (carIsDead)
             {
-                if (Exploded != null)
-                    Exploded("Sorry, this car is dead...");
+                Exploded?.Invoke("Sorry, this car is dead...");
             }
             else
             {

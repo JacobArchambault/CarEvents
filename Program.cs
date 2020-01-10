@@ -4,7 +4,7 @@ namespace CarEvents
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("***** Fun with Events *****\n");
             Car c1 = new Car("SlugBug", 100, 10);
